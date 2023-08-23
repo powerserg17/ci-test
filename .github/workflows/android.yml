@@ -33,6 +33,8 @@ jobs:
   job_2:
     needs: build
     if: always() && !cancelled() && !failure()
+    runs-on: ubuntu-latest
+
     steps:
     - name: Echo
       run: echo ${{ needs.build.result }}
