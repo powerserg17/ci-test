@@ -36,5 +36,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Echo
+    - name: Echo result
       run: echo ${{ needs.build.result }}
