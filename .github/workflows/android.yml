@@ -1,10 +1,7 @@
 name: Android CI
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
     types:
       - opened
       - synchronize
@@ -36,5 +33,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Echo
+    - name: Echo result
       run: echo ${{ needs.build.result }}
