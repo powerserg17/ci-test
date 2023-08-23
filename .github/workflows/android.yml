@@ -33,3 +33,6 @@ jobs:
   job_2:
     needs: build
     if: always() && !cancelled() && !failure()
+    steps:
+    - name: Echo
+      run: echo ${{ needs.build.result }}
